@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="social.css">
+    <link rel="icon" href="drag.png">
+    <title>Rede social - Zumbi a Orda</title>
+</head>
+<body>
+    <div id="let">
+        <h1><strong>Zumbi a Horda</strong></h1>
+    </div>
+    <li><a href="index.html">VOLTAR</a></li>
+    <br>
+    <br>
+    <div id="zul">
+        <p><strong>
+             Este aqui é minha criação.
+             Zumbi a horda trata-se de algo que...ainda não aconteceu...
+        </strong></p>
+    </div>
+    <script>
+         function typeWriter(elemento){
+                 const textoArray=elemento.innerHTML.split('');
+                 elemento.innerHTML='';
+                 textoArray.forEach((letra,i)=>{
+                   setTimeout(()=>elemento.innerHTML+=letra,75*i);
+                 });
+           } 
+           const titulo=document.querySelector('strong');
+           typeWriter(titulo);
+    </script>
+</body>
+</html>
